@@ -1,0 +1,14 @@
+﻿@model  Newtonsoft.Json.Linq.JObject
+
+<div class="jumbotron text-center">
+    @if (Model["errorMessage"] != null) {
+        <h1 class="display-3 text-danger">Sorry :(</h1>
+        <p class="lead">@Model["errorMessage"]</p>
+    } else {
+        <h1 class="display-3 text-success">Thank you!</h1>
+        <p class="lead">@Model["Message"]</p>
+    }
+    <p class="lead">
+        <a class="btn btn-primary btn-sm" href="@Url.Action("Index","Home")" role="button">Return to Homepage</a>
+    </p>
+</div>

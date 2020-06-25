@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Demo 2";
+}
+
+@section scripts{
+    @Scripts.Render("~/Scripts/www/Demo2.js")
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-11 col-lg-10 pb-5">
+            
+
+            <form action="@Url.Action("SubmitResult","Demo2")" id="frmResumeSend" method="post" enctype="multipart/form-data">
+                <div class="card border-axa-blue rounded-0">
+                    <div class="card-header p-0">
+                        <div class="border-primary text-axa-blue text-center py-2">
+                            <h3><i class="fa fa-file-pdf-o"></i> Send your Resume</h3>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+
+                        <div class="container">
+                            <h4>Please upload your resume:</h4>
+                            <div class="custom-file mb-5">
+                                <input type="file" class="custom-file-input" accept=".pdf" id="file" name="file">
+                                <label class="custom-file-label" for="fileUpload">Choose file</label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <input type="submit" value="Submit" class="btn btn-primary bg-axa-blue btn-block rounded-0 py-2">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
